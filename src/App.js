@@ -1,7 +1,8 @@
 import './App.css';
+import { shuffle } from "lodash"
 
 import HeatMap from "react-heatmap-grid";
-import { readString } from 'react-papaparse'
+// import { readString } from 'react-papaparse'
 
 const xLabels = new Array(25).fill(0).map((_, i) => `${i}`);
 
@@ -19,9 +20,17 @@ const data = new Array(yLabels.length).fill(0).map(()=> {
       rowArray.push(counter)
       counter++
     }
-    return rowArray
+    // return rowArray
+    return shuffle(rowArray)
   }
 })
+
+const randomNumbers = function() {
+  let newArray = []
+  return newArray = shuffle(data)
+}
+
+console.log(randomNumbers())
 
 const gradient = function(value, max, min) {
   let result = ``; 
@@ -50,7 +59,7 @@ function App() {
             xLabelsLocation={"bottom"}
             xLabelsVisibility={xLabelsVisibility}
             xLabelWidth={60}
-            data={data}
+            data={randomNumbers()}
             squares
             height={60}
             onClick={(x, y, event) => {
