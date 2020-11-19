@@ -25,12 +25,11 @@ const data = new Array(yLabels.length).fill(0).map(()=> {
   }
 })
 
-const randomNumbers = function() {
-  let newArray = []
-  return newArray = shuffle(data)
-}
+// const randomNumbers = function() {
+//   let newArray = []
+//   return newArray = shuffle(data)
+// }
 
-console.log(randomNumbers())
 
 const gradient = function(value, max, min) {
   let result = ``; 
@@ -59,7 +58,7 @@ function App() {
             xLabelsLocation={"bottom"}
             xLabelsVisibility={xLabelsVisibility}
             xLabelWidth={60}
-            data={randomNumbers()}
+            data={data}
             squares
             height={60}
             onClick={(x, y, event) => {
