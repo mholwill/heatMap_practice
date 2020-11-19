@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { reduce } from 'lodash';
 import React, { Component } from 'react';
 import { CSVReader } from 'react-papaparse';
 
@@ -94,6 +94,7 @@ export default class CSVReader1 extends Component {
                   marginRight: 0,
                   paddingLeft: 20,
                   paddingRight: 20,
+                  backgroundColor: "red"
                 }}
                 onClick={this.handleRemoveFile}
               >

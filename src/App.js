@@ -4,6 +4,8 @@ import { shuffle } from "lodash"
 import HeatMap from "react-heatmap-grid";
 import { readString } from 'react-papaparse'
 
+import CSVReader from './components/CSVReader'
+
 const xLabels = new Array(25).fill(0).map((_, i) => `${i}`);
 
 const xLabelsVisibility = new Array(24)
@@ -52,6 +54,7 @@ function App() {
     <div className="App">
       <header className="App-header" >
         <h1>Heat Map Example</h1>
+        <CSVReader></CSVReader>
         <div style={{ fontSize: "13px" }}>
           <HeatMap
             xLabels={xLabels}
