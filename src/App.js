@@ -51,6 +51,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header" >
+        <h1>Heat Map Example</h1>
         <div style={{ fontSize: "13px" }}>
           <HeatMap
             xLabels={xLabels}
