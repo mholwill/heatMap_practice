@@ -56,7 +56,8 @@ export default class CSVReader1 extends Component {
               style={{
                 display: 'flex',
                 flexDirection: 'row',
-                marginBottom: 10,
+                marginBottom: 0,
+                padding: 20,
               }}
             >
               <button
