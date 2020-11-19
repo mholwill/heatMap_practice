@@ -5,13 +5,11 @@ import { readString } from 'react-papaparse'
 
 const xLabels = new Array(25).fill(0).map((_, i) => `${i}`);
 
-// Display only even labels
 const xLabelsVisibility = new Array(24)
   .fill(0)
   .map((_, i) => (i % 2 === 0 ? true : false));
 
 const yLabels = ["0", "25", "50", "75", "100", "125", "150", "175"];
-
 
 let counter = 1;
 const data = new Array(yLabels.length).fill(0).map(()=> {
@@ -54,7 +52,7 @@ function App() {
             xLabelWidth={60}
             data={data}
             squares
-            height={45}
+            height={60}
             onClick={(x, y, event) => {
               alert(`Clicked ${x}, ${y} and the value is ${event.target.textContent}`)
             }}
