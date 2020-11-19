@@ -35,16 +35,17 @@ const data = new Array(yLabels.length).fill(0).map(()=> {
 
 const gradient = function(value, max, min) {
   let result = ``; 
+  const gradientCalculation = 1 - (max - value) / (max - min)
   if (value < 41) {
-    result =  `rgb(29, 72, 119, ${1 - (max - value) / (max - min)})`
+    result =  `rgb(29, 72, 119, ${gradientCalculation})`
   } else if (value >= 40 && value <= 81) {
-    result = `rgb(27, 138, 90, ${1 - (max - value) / (max - min)})`
+    result = `rgb(27, 138, 90, ${gradientCalculation})`
   } else if (value > 80 && value < 121) {
-    result = `rgb(251, 176, 33, ${1 - (max - value) / (max - min)})`
+    result = `rgb(251, 176, 33, ${gradientCalculation})`
   } else if (value > 120 && value < 161) {
-    result = `rgb(246, 136, 56, ${1 - (max - value) / (max - min)})`
+    result = `rgb(246, 136, 56, ${gradientCalculation})`
   } else {
-    result = `rgb(238, 62, 50, ${1 - (max - value) / (max - min)})`
+    result = `rgb(238, 62, 50, ${ gradientCalculation})`
   }
   return result
 }
