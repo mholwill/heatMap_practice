@@ -44,8 +44,8 @@ const gradient = function(value, max, min) {
 function App() {
   return (
     <div className="App">
-      <header className="App-header" style={{ fontSize: "13px" }}>
-        <div>
+      <header className="App-header" >
+        <div style={{ fontSize: "13px" }}>
           <HeatMap
             xLabels={xLabels}
             yLabels={yLabels}
