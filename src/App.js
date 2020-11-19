@@ -7,9 +7,9 @@ function App() {
     <div className="App">
       <header className="App-header" >
         <h1>Heat Map Example</h1>
-        <CSVReader></CSVReader>
-        <HeatMap></HeatMap>
       </header>
+      <CSVReader></CSVReader>
+      <HeatMap className="Map"></HeatMap>
     </div>
   );
 }

@@ -1,5 +1,7 @@
-import { reduce } from 'lodash';
 import React, { Component } from 'react';
+import '../App.css';
+
+import { reduce } from 'lodash';
 import { CSVReader } from 'react-papaparse';
 
 const buttonRef = React.createRef();
@@ -39,7 +41,7 @@ export default class CSVReader1 extends Component {
 
   render() {
     return (
-      <>
+      <div className="CSV">
         <h5>Basic Upload</h5>
         <CSVReader
           ref={buttonRef}
@@ -103,7 +105,7 @@ export default class CSVReader1 extends Component {
             </aside>
           )}
         </CSVReader>
-      </>
+      </div>
     );
   }
 }

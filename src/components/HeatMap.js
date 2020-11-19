@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 import { shuffle } from "lodash"
 
 import HeatMap from "react-heatmap-grid";
@@ -49,7 +50,7 @@ const gradient = function(value, max, min) {
 
 function HeatMapComponent() {
   return (
-    <div className="App">
+    <div className="App-header">
         <div style={{ fontSize: "13px" }}>
           <HeatMap
             xLabels={xLabels}
