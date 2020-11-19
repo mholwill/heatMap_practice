@@ -26,7 +26,7 @@ const data = new Array(yLabels.length).fill(0).map(()=> {
 })
 
 const gradient = function(value, max, min) {
-  let result = ""; 
+  let result = ``; 
   if (value < 41) {
     result =  `rgb(29, 72, 119, ${1 - (max - value) / (max - min)})`
   } else if (value >= 40 && value <= 81) {
