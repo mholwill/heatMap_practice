@@ -30,20 +30,33 @@ const data = new Array(yLabels.length).fill(0).map(()=> {
 //   return newArray = shuffle(data)
 // }
 
+const COLOURS = {
+    BLUE: {r: 29, g: 72, b: 119},
+    GREEN: {r: 27, g: 138, b: 90},
+    YELLOW: {r: 251, g: 176, b: 33},
+    ORANGE: {r: 246, g: 136, b: 56},
+    RED: {r: 238, g: 62, b: 50},
+}
+
+const getRgba = (colour, opacity) => {
+    const {r, b, g} = colour;
+    return `rgba(${r}, ${g}, ${b}, ${opacity})`
+}
+
 
 const gradient = function(value, max, min) {
   let result = ``; 
-  const gradientCalculation = 1 - (max - value) / (max - min)
+  const opacity = 1 - (max - value) / (max - min)
   if (value < 41) {
-    result =  `rgb(29, 72, 119, ${gradientCalculation})`
+    result =  getRgba(COLOURS.BLUE, opacity)
   } else if (value >= 40 && value <= 81) {
-    result = `rgb(27, 138, 90, ${gradientCalculation})`
+    result = getRgba(COLOURS.GREEN, opacity)
   } else if (value > 80 && value < 121) {
-    result = `rgb(251, 176, 33, ${gradientCalculation})`
+    result = getRgba(COLOURS.YELLOW, opacity)
   } else if (value > 120 && value < 161) {
-    result = `rgb(246, 136, 56, ${gradientCalculation})`
+    result = getRgba(COLOURS.ORANGE, opacity)
   } else {
-    result = `rgb(238, 62, 50, ${gradientCalculation})`
+    result = getRgba(COLOURS.RED, opacity)
   }
   return result
 }
