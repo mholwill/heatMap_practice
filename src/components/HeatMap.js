@@ -30,7 +30,7 @@ const data = new Array(yLabels.length).fill(0).map(()=> {
 //   return newArray = shuffle(data)
 // }
 
-const COLOURS = {
+const COLOUR = {
     BLUE: {r: 29, g: 72, b: 119},
     GREEN: {r: 27, g: 138, b: 90},
     YELLOW: {r: 251, g: 176, b: 33},
@@ -44,19 +44,19 @@ const getRgba = (colour, opacity) => {
 }
 
 
-const gradient = function(value, max, min) {
+const dataColour = function(value, max, min) {
   let result = ``; 
   const opacity = 1 - (max - value) / (max - min)
   if (value < 41) {
-    result =  getRgba(COLOURS.BLUE, opacity)
+    result =  getRgba(COLOUR.BLUE, opacity)
   } else if (value >= 40 && value <= 81) {
-    result = getRgba(COLOURS.GREEN, opacity)
+    result = getRgba(COLOUR.GREEN, opacity)
   } else if (value > 80 && value < 121) {
-    result = getRgba(COLOURS.YELLOW, opacity)
+    result = getRgba(COLOUR.YELLOW, opacity)
   } else if (value > 120 && value < 161) {
-    result = getRgba(COLOURS.ORANGE, opacity)
+    result = getRgba(COLOUR.ORANGE, opacity)
   } else {
-    result = getRgba(COLOURS.RED, opacity)
+    result = getRgba(COLOUR.RED, opacity)
   }
   return result
 }
@@ -78,7 +78,7 @@ function HeatMapComponent() {
               alert(`Clicked ${x}, ${y} and the value is ${event.target.textContent}`)
             }}
             cellStyle={(background, value, min, max, data, x, y) => ({
-              background: gradient(value, max, min),
+              background: dataColour(value, max, min),
               fontSize: "11.5px",
               color: "#444"
             })}
