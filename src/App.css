@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  height: 100vh;
+  background-color: lightgray;
 }
 
 .App-logo {
@@ -19,7 +21,7 @@ header > h1 {
 
 .App-header {
   background-color: lightgray;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,6 +29,7 @@ header > h1 {
   font-size: calc(10px + 2vmin);
   color: #444;
   font-weight: 800;
+  width: auto;
 }
 
 .App-link {
@@ -44,4 +47,20 @@ header > h1 {
 
 .Map {
   border: 1px solid black;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.CSV {
+  background-color: lightgray;
+  margin: 0;
+}
+
+.CSV > h5 {
+  margin: 0;
+}
+
+
