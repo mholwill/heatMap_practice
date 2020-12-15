@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function Form() {
+function Form({onCommentSubmit}) {
 
     const [author, setAuthor] = useState("");
     const [text, setText] = useState("");
@@ -21,13 +21,13 @@ function Form() {
         return
         }
 
-        // onCommentSubmit({
-        //   author: authorToSubmit,
-        //   text: textToSubmit
-        // });
+        onCommentSubmit({
+          author: authorToSubmit,
+          text: textToSubmit
+        });
 
-        // setAuthor("");
-        // setText("");
+        setAuthor("");
+        setText("");
     }
 
     return (

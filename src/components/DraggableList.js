@@ -34,6 +34,7 @@ function DraggableFunction() {
         </ReactSortable>
         </h3>
     </ol>
+    <button >Submit</button>
     </div>
   );
 };

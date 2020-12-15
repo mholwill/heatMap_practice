@@ -1,3 +1,4 @@
+import {useState} from 'react'
 import './App.css';
 import CSVReader from './components/CSVReader'
 import HeatMap from './components/HeatMap'
@@ -6,6 +7,15 @@ import DraggableFunction from './components/DraggableList'
 import Form from './components/Form'
 
 function App() {
+
+  const [comments, setComments] = useState([])
+
+  const addComment = (submittedComment) => {
+    submittedComment.id = Date.now();
+    const updatedComments = [...comments, submittedComment];
+    setComments(updatedComments);
+  }
+
   return (
     <div className="App">
       <header className="App-header" >
@@ -15,7 +25,7 @@ function App() {
       <HeatMap className="Map"></HeatMap> */}
       <SliderComponent />
       <DraggableFunction />
-      <Form></Form>
+      <Form onCommentSubmit={(comment) => addComment(comment)}></Form>
 
     </div>
   );
