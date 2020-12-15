@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+// eslint-disable-next-line
 import { shuffle } from "lodash"
 
 import HeatMap from "react-heatmap-grid";
@@ -13,6 +14,7 @@ const xLabelsVisibility = new Array(24)
 const yLabels = ["0", "25", "50", "75", "100", "125", "150", "175"];
 
 let counter = 1;
+// eslint-disable-next-line
 const data = new Array(yLabels.length).fill(0).map(()=> {
   for (let i=0; i < yLabels.length; i++) {
     const rowArray = [];

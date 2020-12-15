@@ -8,7 +8,7 @@ const buttonRef = React.createRef();
 
 export default class CSVReader1 extends Component {
   handleOpenDialog = (event) => {
-    // Notvent that thvent ref is set async, so it might be null at some point
+    // Not event that thvent ref is set async, so it might be null at some point
     if (buttonRef.current) {
       buttonRef.current.open(event);
     }
