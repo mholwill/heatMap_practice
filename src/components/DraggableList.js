@@ -12,14 +12,23 @@ function DraggableFunction() {
 
   const style = { width: 600, margin: 50 };
 
+  const myStyle = {
+    color: "white",
+    backgroundColor: "DodgerBlue",
+    padding: "10px",
+    fontFamily: "Arial",
+    margin: "10px"
+  };
+
   return (
     <div style={style}>
     <h2>Rank the four statements in order of increasing aggreement in the table below:</h2>
+    <h3>Most agrrement to least agreement</h3>
     <ol>
         <h3>
         <ReactSortable list={state} setList={setState}>
             {state.map((item) => (
-                <li key={item.id}>{item.name}</li>
+                <li style={myStyle} key={item.id}>{item.name}</li>
             ))}
 
         </ReactSortable>
