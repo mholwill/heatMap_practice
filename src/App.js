@@ -3,6 +3,7 @@ import CSVReader from './components/CSVReader'
 import HeatMap from './components/HeatMap'
 import SliderComponent from './components/Slider'
 import DraggableFunction from './components/DraggableList'
+import Form from './components/Form'
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <HeatMap className="Map"></HeatMap> */}
       <SliderComponent />
       <DraggableFunction />
+      <Form></Form>
+
     </div>
   );
 }
