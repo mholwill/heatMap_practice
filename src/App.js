@@ -1,7 +1,8 @@
 import './App.css';
 import CSVReader from './components/CSVReader'
 import HeatMap from './components/HeatMap'
-import Slider from './components/Slider'
+import SliderComponent from './components/Slider'
+import DraggableFunction from './components/DraggableList'
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       </header>
       {/* <CSVReader></CSVReader>
       <HeatMap className="Map"></HeatMap> */}
-      <Slider></Slider>
+      <SliderComponent />
+      <DraggableFunction />
     </div>
   );
 }

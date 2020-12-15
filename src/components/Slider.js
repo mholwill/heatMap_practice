@@ -1,15 +1,27 @@
 import { useState } from 'react'
+import Slider from 'react-input-slider'
+
+function SliderComponent() {
+
+    const [state, setState] = useState({x: 0})
 
 
-function Slider() {
-
-    const [sliderTotal, setSliderTotal] = useState(0)
+    const style = { width: 600, margin: 50 };
 
     return (
-        <div>
+        <div style = {style}>
+            <h1>{state.x}</h1>
+            <Slider
+                axis="x"
+                xstep={20}
+                xmin={0}
+                xmax={100}
+                x={state.x}
+                onChange={({ x }) => setState({ x: x })}
+            />
             
         </div>
     );
 }
 
-export default Slider;
+export default SliderComponent;
